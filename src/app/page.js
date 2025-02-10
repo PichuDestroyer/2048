@@ -35,11 +35,14 @@ export default function Home() {
   const [board, setBoard] = useState(createInitialBoard());
   const [score, setScore] = useState(0);
   const [gameover, setGameover] = useState(false);
-  const [topScores, setTopScores] = useState(
-    localStorage.getItem("score") === null
-      ? []
-      : JSON.parse(localStorage.getItem("score"))
-  );
+  const [topScores, setTopScores] = useState( () => {
+    if (typeof window !== "undefined"){
+      return JSON.parse(localStorage.getItem("score")) || [];
+    }
+    return [];
+  });
+
+  
   const [nameInput, setNameInput] = useState("");
   const [showInput, setShowInput] = useState(false);
   const [timeAttack, setTimeAttack] = useState(false);
