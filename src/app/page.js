@@ -253,7 +253,9 @@ export default function Home() {
       setTopScores(newTopScore);
       setShowInput(false);
       setNameInput("");
-      localStorage.setItem("score", JSON.stringify(newTopScore));
+      if (typeof window !== "undefined"){
+        localStorage.setItem("score", JSON.stringify(newTopScore))
+      }
     }
   };
 
