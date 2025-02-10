@@ -159,6 +159,12 @@ export default function Home() {
     setBoard(updatedBoard);
   };
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+        localStorage.setItem('score', JSON.stringify(newTopScore));
+    }
+}, [newTopScore]);
+
   const handleKeyDown = (event) => {
     if (gameover) return; 
     if (event.key === "ArrowUp") {
@@ -253,9 +259,6 @@ export default function Home() {
       setTopScores(newTopScore);
       setShowInput(false);
       setNameInput("");
-      if (typeof window !== "undefined"){
-        localStorage.setItem("score", JSON.stringify(newTopScore))
-      }
     }
   };
 
