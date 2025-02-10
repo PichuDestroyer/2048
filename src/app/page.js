@@ -4,7 +4,7 @@ import Board from "./Component/Board";
 import React, { useEffect, useState } from "react";
 
 export default function Home() {
-  const TIMER_LIMIT = 1
+  const TIMER_LIMIT = 60
   const createInitialBoard = () => {
     let board = [];
     for (let i = 0; i < 4; i++) {
