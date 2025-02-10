@@ -48,6 +48,7 @@ export default function Home() {
   const [timeAttack, setTimeAttack] = useState(false);
   const [timeLeft, setTimeLeft] = useState(TIMER_LIMIT);
 
+
   const moveUp = () => {
     const newBoard = [...board];
     const newBoardString = JSON.stringify(newBoard);
@@ -161,9 +162,9 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-        localStorage.setItem('score', JSON.stringify(newTopScore));
+        localStorage.setItem('score', JSON.stringify(topScores));
     }
-}, [newTopScore]);
+}, [topScores]);
 
   const handleKeyDown = (event) => {
     if (gameover) return; 
