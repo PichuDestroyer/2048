@@ -18,19 +18,19 @@ const Tile = (props) => {
             case null:
                 return '#cdc1b4';
             case 2:
-                return '#eee4da';
+                return '#7986CB';
             case 4:
-                return '#ede0c8';
+                return '#5C6BC0';
             case 8:
-                return '#f2b179';
+                return '#3F51B5';
             case 16:
-                return '#f59563';
+                return '#E57373';
             case 32:
-                return '#f67c5f';
+                return '#EF5350';
             case 64:
-                return '#f65e3b';
+                return '#F44336';
             case 128:
-                return '#edcf72';
+                return '#9C27B0';
             case 256:
                 return '#edcc61';
             case 512:
